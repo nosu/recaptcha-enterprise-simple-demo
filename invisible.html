@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  </head>
+  <body>
+    <form id="recaptcha-demo-form" method="POST">
+      <div class="g-recaptcha" data-sitekey="{reCAPTCHAキーを設定}"
+      data-callback="onSuccess" data-action="action" data-bind="recaptcha-demo-submit"></div>
+      <script>
+        function onSuccess(response) {
+          console.log('success', response);
+        }
+      </script>
+      <br/>
+      <input id="recaptcha-demo-submit" type="submit" value="Submit">
+    </form>
+  </body>
+</html>
